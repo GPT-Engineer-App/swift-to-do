@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { Container, VStack, HStack, Input, Button, Text, Checkbox, IconButton } from "@chakra-ui/react";
 import { FaTrash } from "react-icons/fa";
 
@@ -37,6 +38,9 @@ const Index = () => {
           />
           <Button onClick={addTask} colorScheme="teal">Add Task</Button>
         </HStack>
+        <Link to="/login">
+          <Button colorScheme="blue">Go to Login</Button>
+        </Link>
         <VStack spacing={2} width="100%">
           {tasks.map((t, index) => (
             <HStack key={index} width="100%" justifyContent="space-between">
